@@ -8,3 +8,4 @@ The primary style being enforced will adhere mostly to the `clang-format` specif
 
 This directory contains a file `.clang-format` which contians our modifications to the default style file.  Projects employing this method of linting / formatting should either copy or link a path to this file to the root of their workspace since `clang-format` will check each directory for a `.clang-format` file. 
 
+Additionally code used to generate cpp documentation uses the `.Doxyfile` present here as well.
