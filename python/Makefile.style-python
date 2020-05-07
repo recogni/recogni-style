@@ -1,0 +1,19 @@
+ifeq ($(_MAKEFILE_EXTERNAL_),)
+_MAKEFILE_STYLE_PYTHON_ := 1
+
+_DEFAULT_GOAL := $(.DEFAULT_GOAL)
+
+BLACK         := black
+BLACK_VERSION := 19.3b0
+
+BLACK_ARGS    := --line-length 120
+
+lint-python:
+	if [ -n "$(BLACK_PATHS)" ] ; then $(BLACK) -q --check --diff $(BLACK_ARGS) $(BLACK_PATHS) ; fi
+
+format-python:
+	if [ -n "$(BLACK_PATHS)" ] ; then $(BLACK) $(BLACK_ARGS) $(BLACK_PATHS) ; fi
+
+.DEFAULT_GOAL := $(_DEFAULT_GOAL)
+
+endif # _MAKEFILE_STYLE_PYTHON_
