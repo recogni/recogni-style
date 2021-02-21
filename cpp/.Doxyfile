@@ -1,11 +1,11 @@
 # Doxyfile 1.8.16
 
 DOXYFILE_ENCODING = UTF-8
-PROJECT_NAME = "RecogniSCModel"
-PROJECT_BRIEF = "A collection of systemC models for Recogni HW efforts"
+PROJECT_NAME = $(DOXYGEN_PROJECT_NAME)
+PROJECT_BRIEF = $(DOXYGEN_PROJECT_DESCRIPTION)
 OUTPUT_DIRECTORY = docs
 OUTPUT_LANGUAGE = English
-INPUT = chip
+INPUT = $(DOXYGEN_PROJECT_INPUT)
 INPUT_ENCODING = UTF-8
 IMAGE_PATH = reference
 ALIASES = sizedimage{3}="\htmlonly <style>div.image img[src=\"\1\"]{\2}</style>\endhtmlonly \image html \1 \"\3\""
