@@ -279,9 +279,10 @@ rules:
   lines-around-comment:
     - warn
     - beforeBlockComment: true
-      afterBlockComment: true
       beforeLineComment: true
-  multiline-comment-style: error
+      allowBlockStart: true
+      allowClassStart: true
+  multiline-comment-style: warn
   no-inline-comments:
     - error
     - ignorePattern: '='
