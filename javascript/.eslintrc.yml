@@ -1,13 +1,12 @@
 # https://eslint.org/docs/rules/
 
-extends: eslint:recommended
-# plugins:
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+parser: '@typescript-eslint/parser'
+plugins:
+  - '@typescript-eslint'
 #   - recogni
-parserOptions:
-  ecmaVersion: 2021
-  sourceType: module
-  ecmaFeatures:
-    jsx: true
 env:
   browser: true
   node: true
