@@ -1,4 +1,4 @@
-ifeq ($(_MAKEFILE_EXTERNAL_),)
+ifeq ($(_MAKEFILE_STYLE_PYTHON_),)
 _MAKEFILE_STYLE_PYTHON_ := 1
 
 _DEFAULT_GOAL := $(.DEFAULT_GOAL)
@@ -9,10 +9,10 @@ BLACK_VERSION := 19.3b0
 BLACK_ARGS    := --line-length 120
 
 lint-python:
-	if [ -n "$(BLACK_PATHS)" ] ; then $(BLACK) -q --check --diff $(BLACK_ARGS) $(BLACK_PATHS) ; fi
+	$(if $(BLACK_PATHS),$(BLACK) -q --check --diff $(BLACK_ARGS) $(BLACK_PATHS))
 
 format-python:
-	if [ -n "$(BLACK_PATHS)" ] ; then $(BLACK) $(BLACK_ARGS) $(BLACK_PATHS) ; fi
+	$(if $(BLACK_PATHS),$(BLACK) $(BLACK_ARGS) $(BLACK_PATHS))
 
 .DEFAULT_GOAL := $(_DEFAULT_GOAL)
 
