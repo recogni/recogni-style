@@ -251,7 +251,9 @@ rules:
   object-shorthand: error
   prefer-arrow-callback: error
   prefer-const: error
-  prefer-destructuring: error
+  prefer-destructuring:
+    - error
+    - object: true
   prefer-rest-params: error
   prefer-spread: error
   prefer-template: error
