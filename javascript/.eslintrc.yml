@@ -148,7 +148,6 @@ rules:
     - VariableDeclarator: first
       CallExpression:
         arguments: first
-
   jsx-quotes: error
   key-spacing: error
   keyword-spacing: error
@@ -180,7 +179,7 @@ rules:
     - error
     - allowForLoopAfterthoughts: true
   no-tabs: error
-  no-ternary: error
+  no-ternary: warn
   no-trailing-spaces: error
   no-whitespace-before-property: error
   object-curly-newline:
